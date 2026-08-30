@@ -3,4 +3,7 @@ pre-commit:
   skip: [merge, rebase]
   jobs:
     - name: prettier
-      run: git ls-files -z | xargs --null prettier --check --ignore-unknown
+      stage_fixed: true
+      exclude:
+        - CLAUDE.md
+      run: prettier --write --ignore-unknown {staged_files}

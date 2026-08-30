@@ -1,6 +1,6 @@
 ---
 name: update-branch
-description: Merges the latest base branch into the current branch, resolving conflicts, verifying, and pushing.
+description: Use when the current branch has fallen behind the branch it was cut from, or the user asks to update, sync, or rebase it onto its base, or a merge conflict with that base needs resolving.
 ---
 
 # Update branch
