@@ -1,0 +1,10 @@
+[hooks]
+postinstall = "lefthook install"
+
+[settings]
+experimental = true
+
+[tools]
+node = "24.20.0"
+"npm:lefthook" = "2.1.12"
+"npm:prettier" = "3.9.6"
