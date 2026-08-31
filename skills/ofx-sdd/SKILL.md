@@ -1,5 +1,5 @@
 ---
-name: sdd
+name: ofx-sdd
 description: Use when starting a feature, or resuming one that has a Q&A or plan under .agent-output — settles the design in a Q&A file and a skeleton plan before any code.
 ---
 

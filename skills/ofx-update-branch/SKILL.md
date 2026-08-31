@@ -1,5 +1,5 @@
 ---
-name: update-branch
+name: ofx-update-branch
 description: Use when the current branch has fallen behind the branch it was cut from, or the user asks to update, sync, or rebase it onto its base, or a merge conflict with that base needs resolving.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: commit
+name: ofx-commit
 description: Use when the user asks to commit the current changes.
 ---
 
