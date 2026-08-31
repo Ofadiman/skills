@@ -24,10 +24,12 @@ Append the whole frontier as one round to `questions.md`, under its own `## Roun
 
 <the decision at stake and why it matters>
 
-| Option     | Pros   | Cons   |
-| ---------- | ------ | ------ |
-| <option A> | <pros> | <cons> |
-| <option B> | <pros> | <cons> |
+- **<option A>** — <what it does>
+  - Pro: <what it buys>
+  - Con: <what it costs>
+- **<option B>** — <what it does>
+  - Pro: <what it buys>
+  - Con: <what it costs>
 
 **Recommendation:** <option> — <why this one beats the others>
 
