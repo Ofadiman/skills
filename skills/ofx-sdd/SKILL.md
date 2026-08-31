@@ -15,7 +15,7 @@ Interview me relentlessly until we reach a shared understanding. Map the change 
 
 Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled — the questions you can ask now without guessing at answers you have not heard yet. A question whose answer depends on another question still open in this round belongs to a later round.
 
-Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — look it up before you write the round, rather than asking me for something you could find yourself. The _decisions_ are mine: put each one to me and wait.
+Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — dispatch a subagent to find it rather than asking me for something you could look up yourself. Dispatch everything the round needs in one go so the lookups run in parallel, and let them all report before you write the round: a question that was only waiting on a fact belongs in this round, not the next one. The _decisions_ are mine: put each one to me and wait.
 
 Append the whole frontier as one round to `questions.md`, under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round like this:
 
