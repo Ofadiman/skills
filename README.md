@@ -18,3 +18,5 @@ skills add Ofadiman/skills --global --yes --agent claude-code codex --skill '*'
   `skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-sdd`
 - [`ofx-update-branch`](skills/ofx-update-branch/SKILL.md) — use when the current branch has fallen behind the branch it was cut from, or a conflict with that base needs resolving. Resolves the base, merges, settles each conflict by recovering both sides' intent, verifies against the repo's own checks, then pushes.
   `skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-update-branch`
+- [`ofx-worktrees`](skills/ofx-worktrees/SKILL.md) — use when asking for a git worktree to be created, switched to, listed, or removed. Routes every worktree action through the `wt` CLI, names branches off the ticket key or the change itself, and gates the destructive removal flags behind your go-ahead.
+  `skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-worktrees`
