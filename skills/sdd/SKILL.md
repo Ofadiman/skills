@@ -15,7 +15,7 @@ Interview me relentlessly until we reach a shared understanding. Map the change 
 
 Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled — the questions you can ask now without guessing at answers you have not heard yet. A question whose answer depends on another question still open in this round belongs to a later round.
 
-Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — dispatch a subagent to find it rather than asking me for something you could look up yourself. Stay unblocked while it runs: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the subagent to report, and the rest of the frontier goes out now. The _decisions_ are mine: put each one to me and wait.
+Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — look it up before you write the round, rather than asking me for something you could find yourself. The _decisions_ are mine: put each one to me and wait.
 
 Append the whole frontier as one round to `questions.md`, under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round like this:
 
@@ -34,10 +34,7 @@ Append the whole frontier as one round to `questions.md`, under its own `## Roun
 **Answer:**
 ```
 
-When I tell you I have answered, read the whole file back:
-
-- An **Answer:** left blank is unanswered. Name every one of them back to me and stop, rather than reading an answer into the silence.
-- An answer that asks you for a fact or an explanation leaves that decision open. Write the reply into the file under a `**Reply:**` heading beneath my answer, then re-ask the decision in the next round with your recommendation updated by what you just told me.
+When I tell you I have answered, read the whole file back. An **Answer:** left blank is unanswered: name every one of them back to me and stop, rather than reading an answer into the silence.
 
 My answers reshape the tree: each settled decision pushes the frontier outward and unblocks the questions that hung off it. Recompute the frontier, and append the next round while it still holds questions.
 
@@ -64,12 +61,12 @@ Split the work into tasks, each one a slice of behaviour that can be completed a
   - `src/filters/useFilterState.test.ts` — `useFilterState seeds itself from the URL on mount`, `useFilterState debounces rapid changes into one query update`
 ```
 
-Report the path and stop. From here on, route every change by what it touches: naming, ordering, or structure revises `plan.md` and stops at the plan gate; a change to behaviour, to scope, or to a decision `questions.md` already settled goes back to phase 1 as a new round and comes through both gates again. The plan gate is my explicit agreement, and you ask me for it.
+Report the path and stop. Route my feedback by what it touches: naming, ordering, or structure revises `plan.md` and stops at the plan gate; a change to behaviour, to scope, or to a decision `questions.md` already settled goes back to phase 1 as a new round and comes through both gates again. The plan gate is my explicit agreement, and you ask me for it.
 
 ## 3. Implementation
 
 Work `plan.md` from top to bottom. Complete one task, verify it with the tests that task names, check its box, then take the next one.
 
-When the code contradicts the plan — a name that no longer fits, a task that has to split, a dependency the plan missed — stop and route the revision by the phase 2 rule. Implementation carries on once I have passed every gate that routing hits.
+When the code contradicts the plan — a name that no longer fits, a task that has to split, a dependency the plan missed — take the best call available to you, correct `plan.md` to say what you actually did, and carry on. Collect every one of those departures and report them when the work is done.
 
 Done when every box is checked and the checks are green. Discover the checks from the repo — its task runner, package scripts, or CI config — and run every one that runs locally over the paths you touched. Report a check you cannot get to green rather than counting the work done.
