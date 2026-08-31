@@ -5,7 +5,7 @@ description: Use when starting a feature, or resuming one that has a Q&A or plan
 
 # Spec-driven development
 
-Three phases — **questions**, **plan**, **implementation** — each gated on me. A phase ends waiting for my written answers or my explicit go-ahead, and the next one starts only once I have passed that gate.
+Three phases — **questions**, **plan**, **implementation** — held apart by two gates, and both gates are mine: settled questions open the plan, and my agreement to the plan opens implementation.
 
 Both artifacts live in `.agent-output/<feature>/` in the current working directory: `questions.md` and `plan.md`. `<feature>` is a kebab-case slug for the feature at hand — take it from my invocation, or propose one and get my agreement before you write anything. When that directory already exists, read whichever artifacts are in it and tell me the gate you think we are standing at — which decisions are still open, whether the plan is agreed, which boxes are checked — and resume once I confirm it.
 
