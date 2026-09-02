@@ -47,6 +47,8 @@ A fact earns its place in the file only inside the question it bears on — in t
 #### Answer
 ```
 
+Leave three blank lines under every `#### Answer` heading, so I have room to type between it and the question that follows.
+
 Write it in plain prose and plain markdown: no icons, no decorative symbols, nothing outside ordinary punctuation.
 
 When I tell you I have answered, read the whole file back. An empty `#### Answer` section is unanswered: name every one of them back to me and stop, rather than reading an answer into the silence. A bare letter under `#### Answer` means that option exactly as written.
