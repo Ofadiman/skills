@@ -17,9 +17,9 @@ Work the tree in **rounds**. The **frontier** is every decision whose prerequisi
 
 Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — dispatch a subagent to find it rather than asking me for something you could look up yourself. Dispatch everything the round needs in one go so the lookups run in parallel, and let them all report before you write the round: a question that was only waiting on a fact belongs in this round, not the next one. The _decisions_ are mine: put each one to me and wait.
 
-Facts never get a section of their own. A fact earns its place in the file only inside the question it bears on — in that question's framing, or in the pro or con it decides. A fact that changes no decision is one you keep to yourself.
+A fact earns its place in the file only inside the question it bears on — in that question's framing, or in the pro or con it decides. A fact that changes no decision is one you keep to yourself.
 
-Append the whole frontier as one round to `questions.md`, under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round like this, one `####` option per choice, lettered so I can answer with the letter alone:
+`questions.md` is rounds of questions and nothing else: every heading in it is a `## Round N`, or a question inside one. Append the whole frontier as one round under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round to this template exactly, heading levels and all, one `####` option per choice, lettered so I can answer with the letter alone:
 
 ```md
 ### Q1 — <question title>
