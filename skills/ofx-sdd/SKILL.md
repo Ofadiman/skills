@@ -5,9 +5,9 @@ description: Use when starting a feature, or resuming one that has a Q&A or plan
 
 # Spec-driven development
 
-Three phases — **questions**, **plan**, **implementation** — held apart by two gates, and both gates are mine: settled questions open the plan, and my agreement to the plan opens implementation.
+Three phases — **questions**, **plan**, **implementation** — and one gate, which is mine: settled questions open the plan, and the plan runs straight on into implementation without stopping.
 
-Both artifacts live in `.agent-output/<feature>/` in the current working directory: `questions.md` and `plan.md`. `<feature>` is a kebab-case slug for the feature at hand — take it from my invocation, or propose one and get my agreement before you write anything. When that directory already exists, read whichever artifacts are in it and tell me the gate you think we are standing at — which decisions are still open, whether the plan is agreed, which boxes are checked — and resume once I confirm it.
+Both artifacts live in `.agent-output/<feature>/` in the current working directory: `questions.md` and `plan.md`. `questions.md` is ours and every decision in it is mine; `plan.md` is yours alone, and I am not involved in writing or revising it. `<feature>` is a kebab-case slug for the feature at hand — take it from my invocation, or propose one and get my agreement before you write anything. When that directory already exists, read whichever artifacts are in it and tell me where the work stands — which decisions are still open, whether the plan is written, which boxes are checked — and resume once I confirm it.
 
 ## 1. Questions
 
@@ -76,7 +76,7 @@ Split the work into tasks, each one a slice of behaviour that can be completed a
   - `src/filters/useFilterState.test.ts` — `useFilterState seeds itself from the URL on mount`, `useFilterState debounces rapid changes into one query update`
 ```
 
-Report the path and stop. Route my feedback by what it touches: naming, ordering, or structure revises `plan.md` and stops at the plan gate; a change to behaviour, to scope, or to a decision `questions.md` already settled goes back to phase 1 as a new round and comes through both gates again. The plan gate is my explicit agreement, and you ask me for it.
+Go straight on into phase 3 without announcing any of this: `plan.md` is your working memory, so do not report its path, do not tell me you wrote it, and do not summarise it for me. Never ask me to approve the plan, and never bring me a question about naming, ordering, or structure — those you settle yourself from the repo's conventions and the neighbouring code. If I comment on the plan unprompted, route it by what it touches: naming, ordering, or structure you fix in place and carry on; a change to behaviour, to scope, or to a decision `questions.md` already settled goes back to phase 1 as a new round and comes through the gate again.
 
 ## 3. Implementation
 
