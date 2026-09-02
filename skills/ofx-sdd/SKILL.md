@@ -17,26 +17,39 @@ Work the tree in **rounds**. The **frontier** is every decision whose prerequisi
 
 Finding _facts_ is your job, never mine. When a frontier question needs a fact from the environment — the filesystem, a tool, a ticket — dispatch a subagent to find it rather than asking me for something you could look up yourself. Dispatch everything the round needs in one go so the lookups run in parallel, and let them all report before you write the round: a question that was only waiting on a fact belongs in this round, not the next one. The _decisions_ are mine: put each one to me and wait.
 
-Append the whole frontier as one round to `questions.md`, under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round like this:
+Facts never get a section of their own. A fact earns its place in the file only inside the question it bears on — in that question's framing, or in the pro or con it decides. A fact that changes no decision is one you keep to yourself.
+
+Append the whole frontier as one round to `questions.md`, under its own `## Round N` heading, leaving every earlier round in the file word for word — then report that path and wait for my written answers. Write each question in that round like this, one `####` option per choice, lettered so I can answer with the letter alone:
 
 ```md
 ### Q1 — <question title>
 
 <the decision at stake and why it matters>
 
-- **<option A>** — <what it does>
-  - Pro: <what it buys>
-  - Con: <what it costs>
-- **<option B>** — <what it does>
-  - Pro: <what it buys>
-  - Con: <what it costs>
+#### A — <option>
 
-**Recommendation:** <option> — <why this one beats the others>
+<what it does>
 
-**Answer:**
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### B — <option>
+
+<what it does>
+
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### Recommendation
+
+<letter> — <why this one beats the others>
+
+#### Answer
 ```
 
-When I tell you I have answered, read the whole file back. An **Answer:** left blank is unanswered: name every one of them back to me and stop, rather than reading an answer into the silence.
+Write it in plain prose and plain markdown: no icons, no decorative symbols, nothing outside ordinary punctuation.
+
+When I tell you I have answered, read the whole file back. An empty `#### Answer` section is unanswered: name every one of them back to me and stop, rather than reading an answer into the silence. A bare letter under `#### Answer` means that option exactly as written.
 
 My answers reshape the tree: each settled decision pushes the frontier outward and unblocks the questions that hung off it. Recompute the frontier, and append the next round while it still holds questions.
 
