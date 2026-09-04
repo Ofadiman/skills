@@ -12,6 +12,14 @@ skills add Ofadiman/skills --global --yes --agent claude-code codex --skill '*'
 
 ## Skills
 
+### [`ofx-adr`](skills/ofx-adr/SKILL.md)
+
+Use when a technical decision needs its options weighed. Settles the option set with you and stops when only one survives, researches each option into a record under `adr/` whose bodies stay neutral and whose summary compares them all on the same decision factors, and leaves the outcome yours to call.
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-adr
+```
+
 ### [`ofx-commit`](skills/ofx-commit/SKILL.md)
 
 Use when committing the current changes. Classifies every path as in or out of scope, stages only the in-scope ones, and writes a conventional-commit message whose body carries why the change was made.
