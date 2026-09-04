@@ -7,7 +7,7 @@ description: Use when starting a feature, or resuming one that has a Q&A or plan
 
 Three phases — **questions**, **plan**, **implementation** — and one gate, which is mine: settled questions open the plan, and the plan runs straight on into implementation without stopping.
 
-Both artifacts live in `.agent-output/<feature>/` in the current working directory: `questions.md` and `plan.md`. `questions.md` is ours and every decision in it is mine; `plan.md` is yours alone, and I am not involved in writing or revising it. `<feature>` is a kebab-case slug for the feature at hand — take it from my invocation, or propose one and get my agreement before you write anything. When that directory already exists, read whichever artifacts are in it and tell me where the work stands — which decisions are still open, whether the plan is written, which boxes are checked — and resume once I confirm it.
+Both artifacts live in `.agent-output/<feature>/` in the current working directory: `questions.md` and `plan.md`. `questions.md` is ours and every decision in it is mine; `plan.md` is yours alone, and I am not involved in writing or revising it. `<feature>` is a kebab-case slug you name yourself, slugged out of the change itself from the context I gave you, and you write the file under it. The slug is yours, never a question you put to me. When that directory already exists, read whichever artifacts are in it and tell me where the work stands — which decisions are still open, whether the plan is written, which boxes are checked — and resume once I confirm it.
 
 ## 1. Questions
 
