@@ -45,9 +45,63 @@ A fact earns its place in the file only inside the question it bears on — in t
 <letter> — <why this one beats the others>
 
 #### Answer
+
+<letter>
+
+### Q2 — <question title>
+
+<the decision at stake and why it matters>
+
+#### A — <option>
+
+<what it does>
+
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### B — <option>
+
+<what it does>
+
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### Recommendation
+
+<letter> — <why this one beats the others>
+
+#### Answer
+
+<letter>
+
+### Q3 — <question title>
+
+<the decision at stake and why it matters>
+
+#### A — <option>
+
+<what it does>
+
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### B — <option>
+
+<what it does>
+
+- Pro: <what it buys>
+- Con: <what it costs>
+
+#### Recommendation
+
+<letter> — <why this one beats the others>
+
+#### Answer
+
+<letter>
 ```
 
-Leave three blank lines under every `#### Answer` heading, so I have room to type between it and the question that follows.
+The `<letter>` under each `#### Answer` marks where my answer lands, typed after you hand the file over — never something you fill in. You write every `#### Answer` empty, with three blank lines under the heading so I have room to type between it and the question that follows.
 
 Write it in plain prose and plain markdown: no icons, no decorative symbols, nothing outside ordinary punctuation.
 
