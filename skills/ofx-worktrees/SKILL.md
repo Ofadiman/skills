@@ -1,6 +1,7 @@
 ---
 name: ofx-worktrees
 description: Use when the user asks to create, switch to, list, or remove a git worktree, or to check a pull or merge request out into one.
+disable-model-invocation: true
 ---
 
 # Worktrees

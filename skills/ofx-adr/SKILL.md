@@ -1,6 +1,7 @@
 ---
 name: ofx-adr
 description: Use when a technical decision needs its options weighed and written up as an ADR, or an ADR already under adr/ needs its outcome recorded.
+disable-model-invocation: true
 ---
 
 # Architecture decision record
