@@ -51,3 +51,11 @@ Use when asking for a git worktree to be created, switched to, listed, or remove
 ```sh
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-worktrees
 ```
+
+### [`ofx-writing-for-humans`](skills/ofx-writing-for-humans/SKILL.md)
+
+Use when prose reads like a chatbot wrote it. Marks 25 AI tells, rewrites out the ones that meet their pattern's threshold without adding anything the source does not carry, and matches your voice from a writing sample when you give one. Adapted from [`humanizer`](https://github.com/blader/humanizer) and [`stop-slop`](https://github.com/hardikpandya/stop-slop).
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-writing-for-humans
+```
