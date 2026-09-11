@@ -52,6 +52,14 @@ Use when asking for a git worktree to be created, switched to, listed, or remove
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-worktrees
 ```
 
+### [`ofx-writing-for-agents`](skills/ofx-writing-for-agents/SKILL.md)
+
+Use when writing or editing anything an agent reads, from a skill to an `AGENTS.md`. Covers context pointers, the two loads, the information hierarchy, completion criteria, leading words, and pruning. Adapted from [`writing-for-agents`](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md).
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-writing-for-agents
+```
+
 ### [`ofx-writing-for-humans`](skills/ofx-writing-for-humans/SKILL.md)
 
 Use when prose reads like a chatbot wrote it. Marks 25 AI tells, rewrites out the ones that meet their pattern's threshold without adding anything the source does not carry, and matches your voice from a writing sample when you give one. Adapted from [`humanizer`](https://github.com/blader/humanizer) and [`stop-slop`](https://github.com/hardikpandya/stop-slop).
