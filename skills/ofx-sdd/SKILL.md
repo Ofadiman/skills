@@ -47,8 +47,6 @@ A fact earns its place in the file only inside the question it bears on — in t
 
 #### Answer
 
-<letter>
-
 ### Q2 — <question title>
 
 <the decision at stake and why it matters>
@@ -73,8 +71,6 @@ A fact earns its place in the file only inside the question it bears on — in t
 
 #### Answer
 
-<letter>
-
 ### Q3 — <question title>
 
 <the decision at stake and why it matters>
@@ -98,8 +94,6 @@ A fact earns its place in the file only inside the question it bears on — in t
 <letter> — <why this one beats the others>
 
 #### Answer
-
-<letter>
 ```
 
 The `<letter>` under each `#### Answer` marks where my answer lands, typed after you hand the file over — never something you fill in. You write every `#### Answer` empty, with three blank lines under the heading so I have room to type between it and the question that follows.
