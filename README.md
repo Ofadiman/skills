@@ -36,6 +36,14 @@ Use when starting a feature, or resuming one already under way. Interviews you i
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-sdd
 ```
 
+### [`ofx-to-interview-questions`](skills/ofx-to-interview-questions/SKILL.md)
+
+Use when notes taken while reading documentation need turning into something to study from. Sorts every note into topics, checks each claim against the official docs, and writes interview questions each followed by its answer in prose, folding later notes into the same file.
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-to-interview-questions
+```
+
 ### [`ofx-update-branch`](skills/ofx-update-branch/SKILL.md)
 
 Use when the current branch has fallen behind the branch it was cut from, or a conflict with that base needs resolving. Resolves the base, merges, settles each conflict by recovering both sides' intent, verifies against the repo's own checks, then pushes.
