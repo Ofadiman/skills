@@ -30,9 +30,8 @@ Write each topic as questions an interviewer would ask, one concept per question
 - **Why**: the problem a feature solves, or the reason behind a rule.
 - **Contrast**: the difference between two neighbouring features, and when to pick each.
 - **Scenario**: a situation to handle, a bug to explain, or a design choice to defend.
-- **Code reading**: a short snippet, and what it prints, renders, or gets wrong.
 
-Every question names its subject outright, so it still reads clearly when I meet it cold, out of order. Within a topic, run from foundational to advanced.
+Every question is one an interviewer could ask out loud, with nothing on screen. It names its subject outright and states in words any code it is about, so I can answer it cold, out of order, before reading the example below it: "Why does a React component wrapped in `memo` still re-render when its parent passes it a function declared in the parent's body?" Within a topic, run from foundational to advanced.
 
 Every answer is prose that sits directly under its question and reads as one piece with it: it opens with the direct answer in one or two sentences and runs on into the reasoning, followed by a code example whenever the concept lives in code. Keep the examples minimal and runnable, in the subject's own language. Cover what my notes cover; a fact the source adds earns its place only when the answer is wrong or incomplete without it.
 
