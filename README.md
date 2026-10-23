@@ -42,12 +42,12 @@ Use when starting a feature, or resuming one already under way. Interviews you i
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-sdd
 ```
 
-### [`ofx-to-interview-questions`](skills/ofx-to-interview-questions/SKILL.md)
+### [`ofx-to-flashcards`](skills/ofx-to-flashcards/SKILL.md)
 
-Use when notes taken while reading documentation need turning into something to study from. Sorts every note into topics, checks each claim against the official docs, and writes interview questions each followed by its answer in prose, folding later notes into the same file.
+Use when notes taken while reading documentation need turning into something to study from. Sorts every note into topics, checks each claim against the official docs, and writes flashcards, each a question followed by its answer in prose, folding later notes into the same file.
 
 ```sh
-skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-to-interview-questions
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-to-flashcards
 ```
 
 ### [`ofx-update-branch`](skills/ofx-update-branch/SKILL.md)
