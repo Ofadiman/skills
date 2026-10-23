@@ -10,6 +10,12 @@ Every skill, into Claude Code and Codex:
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill '*'
 ```
 
+Or, from a clone, symlink every skill into `~/.claude/skills` and `~/.codex/skills` so both tools read the working copy:
+
+```sh
+./install.sh
+```
+
 ## Skills
 
 ### [`ofx-adr`](skills/ofx-adr/SKILL.md)
