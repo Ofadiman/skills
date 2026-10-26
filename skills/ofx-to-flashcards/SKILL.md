@@ -24,16 +24,18 @@ When a note contradicts the source, the answer follows the source, and the contr
 
 ## 3. Write the cards
 
-Write each topic as cards, one concept per card. Mix the kinds of question the topic supports:
+Write one card per **point**: a single thing my notes say about a topic. The notes set the count, so a short set of notes makes a short file. Each card takes the one kind of question its point supports:
 
-- **Recall**: what a feature is and what it does.
-- **Why**: the problem a feature solves, or the reason behind a rule.
-- **Contrast**: the difference between two neighbouring features, and when to pick each.
-- **Scenario**: a situation to handle, a bug to explain, or a design choice to defend.
+- **Recall**: the point says what a feature is or does.
+- **Why**: the point gives the problem a feature solves, or the reason behind a rule.
+- **Contrast**: the point sets two neighbouring features against each other.
+- **Scenario**: the point is a situation to handle, a bug to explain, or a design choice to defend.
 
 Every question is one I could hear read out loud and answer with nothing on screen. It names its subject outright and states in words any code it is about, so I can answer it cold, out of order, before reading the example below it: "Why does a React component wrapped in `memo` still re-render when its parent passes it a function declared in the parent's body?" Within a topic, run from foundational to advanced.
 
-Every answer is prose that sits directly under its question and reads as one piece with it: it opens with the direct answer in one or two sentences and runs on into the reasoning, followed by a code example whenever the concept lives in code. Keep the examples minimal and runnable, in the subject's own language. Cover what my notes cover; a fact the source adds earns its place only when the answer is wrong or incomplete without it.
+Every answer reads on from its question and fits on the back of an index card: one to three sentences of prose that open on the direct answer and carry only the reasoning the question asks for. When the point lives in code, add a runnable example in the subject's own language: it imports or defines every name it uses, so it runs as-is when pasted into a fresh project. Keep it minimal: the lines that show the point, plus the smallest stand-ins that make it run. Cover what my notes cover; a fact the source adds earns its place only when the answer is wrong or incomplete without it.
+
+The step is done when every card answers a point from my notes and every point has its card.
 
 The file holds cards, nothing else. Topics shape the order only: keep each topic's cards together, in topic order, with no heading of their own. Write the file to this template exactly:
 
@@ -42,13 +44,13 @@ The file holds cards, nothing else. Topics shape the order only: keep each topic
 
 <answer>
 
-```<language>
-<example>
-```
-
 ### <Question>
 
 <answer>
+
+```<language>
+<example>
+```
 ````
 
 Write in plain prose and plain markdown: no icons, no decorative symbols.
