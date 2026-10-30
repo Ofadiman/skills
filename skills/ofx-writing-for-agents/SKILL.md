@@ -6,13 +6,13 @@ disable-model-invocation: true
 
 # Writing for agents
 
-Reference for writing any document an agent consumes: a skill, an `AGENTS.md` / `CLAUDE.md`, a doc reached by a pointer. The packaging differs; the writing does not: the same levers make each one predictable, since the agent takes the same _process_ every run rather than producing the same output.
+A document you write or edit is done when every sentence in it survives [Pruning](#pruning). Run its tests on the first draft, before you hand the document over.
 
 ## Context pointers
 
 A **context pointer** is a reference held in the agent's context that names some out-of-context material and encodes the condition for reaching it. A skill's description is one; a line in `AGENTS.md` naming a doc is the same object. The pointer's _wording_, not its target, decides when the agent reaches the material, and how reliably. A must-have target behind a weakly worded pointer is a variance bug: sharpen the wording first, and inline the material only if sharpening fails.
 
-A pointer does two jobs: state what the material is, and list the **branches** that should trigger reaching it (a branch is a distinct case the document handles, so different runs take different paths through it). Every word of an always-loaded pointer costs on every turn, so it earns even harder pruning than the body:
+A pointer does two jobs: state what the material is, and list the **branches** that should trigger reaching it (a branch is a distinct case the document handles, so different runs take different paths through it). A pointer the agent reaches in sequence, such as the file of the next step, has no branches: its position is the trigger and its name says what the material is, so a summary beside it only repeats the file. Every word of an always-loaded pointer costs on every turn, so it earns even harder pruning than the body:
 
 - **Front-load the leading word**: the pointer is where it does its triggering work.
 - **One trigger per branch.** Synonyms that rename a single branch are one branch written twice; collapse them and keep only genuinely distinct branches.
@@ -73,7 +73,12 @@ You win twice: fewer tokens, and a sharper hook for the agent to hang its thinki
 
 ## Pruning
 
-- Keep each meaning in a **single source of truth**: one authoritative place, so changing the behaviour is a one-place edit. **Duplication** (the same meaning in more than one place) costs maintenance and tokens, and inflates a meaning's prominence on the ladder past its real rank. (The accidental inverse of a leading word, which repeats a token on purpose, never the meaning.)
+- Keep each meaning in a **single source of truth**: one authoritative place, so changing the behaviour is a one-place edit. **Duplication** (the same meaning in more than one place) costs maintenance and tokens, and inflates a meaning's prominence on the ladder past its real rank. (The accidental inverse of a leading word, which repeats a token on purpose, never the meaning.) It creeps in most often beside pointers: a summary of the file a pointer names, a rule restated from the file that owns it, an index of files the steps already point to. Point at the owner and let it speak.
 - The **environment** is a source of truth too (`package.json` scripts, config files, the directory layout, `--help` output), and a document that restates it is a **cache**: a copy of a lookup, earning its load only when the lookup is expensive. Cache what the agent cannot find by looking: the unwritten convention, the reason behind a choice, the gotcha no config confesses. Leave the one-file, one-command lookups to the environment, where they cannot go stale.
 - Check every line for **relevance**: does it still bear on what the document does? A line loses relevance by never bearing on the task (mere exposition, or a branch that should be disclosed) or by going stale as the behaviour or world it describes changes. Shorter documents are easier to keep relevant. Without a pruning discipline the default fate is **sediment**: stale layers that settle because adding feels safe and removing feels risky, until you must core down through them to find what is still live.
-- Hunt **no-ops** sentence by sentence: an instruction the model already obeys by default pays load to say nothing. The test (does it change behaviour versus the default?) is model-relative, not reader-relative: two people disagreeing about a no-op disagree about the default, and settle it by running the document, not by debate. When a sentence fails, delete the whole sentence rather than trim words from it. The test also grades leading words: a word too weak to beat the default (_be thorough_ when the agent is already thorough-ish) is a no-op, and the fix is a stronger word (_relentless_), not a different technique.
+- Hunt **no-ops** sentence by sentence: a sentence whose deletion leaves the agent's behaviour unchanged pays load to say nothing. The test: name what the agent does differently because the sentence is there. It is model-relative, not reader-relative: two people disagreeing about a no-op disagree about the default, and settle it by running the document, not by debate. When a sentence fails, delete the whole sentence rather than trim words from it. First drafts reliably carry three shapes:
+  - **Throat-clearing**: an opening that says what the document is or does, which the pointer that loaded it already said. Open on the first thing the agent does or needs.
+  - **Defaults**: an instruction the model already obeys, such as asking the user for a missing argument.
+  - **Inventory**: a fact no action depends on, such as a list of required tools. Move it into the action that uses it, a check in the step that needs the tool, or cut it.
+
+  The test also grades leading words: a word too weak to beat the default (_be thorough_ when the agent is already thorough-ish) is a no-op, and the fix is a stronger word (_relentless_), not a different technique.
