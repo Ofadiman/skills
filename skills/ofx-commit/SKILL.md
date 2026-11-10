@@ -1,7 +1,6 @@
 ---
 name: ofx-commit
 description: Use when the user asks to commit the current changes.
-disable-model-invocation: true
 ---
 
 # Commit
