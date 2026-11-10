@@ -11,6 +11,7 @@ description: Use when the user asks to commit the current changes.
 2. Classify every path in the status output as either in scope or out of scope for the current context. Finish the classification before staging anything, so no path is left unaccounted for.
 3. Stage only the in-scope paths and hunks with path-scoped `git add` commands, using `git add --patch` when a file also contains out-of-scope changes. Treat changes created by other agents as out of scope unless they belong to the current context. Never use `git add -A`, `git add .`, or an equivalent repository-wide pathspec.
 4. Create one commit containing only the in-scope changes, with a message in the format below. Exclude out-of-scope changes even when they are already staged, and preserve them in the working tree and index.
+5. After the commit succeeds, reply with only the first line of the commit message, verbatim. Leave out the hash, branch, body, file list, hook results, and working-tree status. If the commit fails, report the failure instead.
 
 ## Commit message
 
