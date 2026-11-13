@@ -23,7 +23,4 @@ description: Use when the user asks to commit the current changes.
 
 The body carries why the change was made: the problem it solves, the constraint that forced this approach over an obvious alternative, or the consequence a reader would not predict from the diff. Omit it when the description says enough.
 
-`<type>` is one of `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `style`, or `test`, where:
-
-- `build`: Changes that affect the build system or external dependencies.
-- `chore`: Repository maintenance outside the other types, including `.gitignore`, `.gitattributes`, `.editorconfig`, `CODEOWNERS`, issue templates, merge-request templates, IDE, devcontainer, or local developer-tool configuration, and maintenance scripts unrelated to building, testing, or CI.
+`<type>` is one of `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `style`, or `test`.
