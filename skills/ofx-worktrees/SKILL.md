@@ -10,11 +10,11 @@ Every worktree and its branch is created, switched to, listed, and removed throu
 
 ## Naming
 
-A worktree is addressed by its branch name, so the name you pick is a branch name — lowercase and hyphen-separated:
+`<name>` is a branch name, lowercase and hyphen-separated:
 
 - **A ticket covers the work** — the ticket key followed by a slug of its title: Jira `JIRA-123` titled "Search bar drops the last keystroke" gives `jira-123-search-bar-drops-last-keystroke`. Read the title from the ticket rather than from my paraphrase of it.
-- **No ticket** — a slug of the change itself, taken out of the context I gave you: `fix-config-parser-race`, `add-retry-to-upload`.
-- **A pull or merge request already exists** — pass its URL and let `wt` reuse the remote branch name.
+- **No ticket** — a slug of the change itself: `fix-config-parser-race`, `add-retry-to-upload`.
+- **A pull or merge request already exists** — its URL, or the short form `pr:123` or `mr:101`, stands in for `<name>`, and `wt` reuses the remote branch name.
 
 ## Creating and switching
 
@@ -22,20 +22,11 @@ A worktree is addressed by its branch name, so the name you pick is a branch nam
 wt switch --create <name> --no-cd --format=json --yes
 ```
 
-`--no-cd` and `--yes` are what make the command usable from a tool call: the working directory never follows a switch, and an approval prompt would block a non-interactive shell. Take the worktree path out of the JSON result and treat it as the root of the work, addressing every following file and command with an absolute path under it.
+Take the worktree path out of the JSON result and treat it as the root of the work, addressing every following file and command with an absolute path under it.
 
-- `--base <ref>` bases the branch on something other than the repository's default branch: `--base origin/release`.
-- Switching to a branch that already exists is the same command with `--create` dropped. `wt list --branches --format=json` shows which branches and worktrees are already there.
-- A pull or merge request URL replaces `<name>`, also with `--create` dropped:
-
-  ```sh
-  wt switch https://github.com/owner/repo/pull/123 --no-cd --format=json --yes
-  wt switch https://gitlab.com/owner/repo/-/merge_requests/101 --no-cd --format=json --yes
-  ```
-
-  `pr:123` and `mr:101` are the short forms.
-
-- A repository can configure a pre-start hook that provisions the new worktree by installing dependencies and building it, which runs for minutes, so allow this command a matching timeout. `wt config show` names the hooks a repository carries.
+- `--base <ref>` cuts the branch from a ref other than the repository's default branch.
+- Drop `--create` when the branch already exists (`wt list --branches --format=json` shows which do) or `<name>` is a pull or merge request.
+- A repository's pre-start hook can install dependencies and build the new worktree for minutes, so allow the command a timeout to match. `wt config show` names the hooks a repository carries.
 
 ## Listing
 
@@ -47,9 +38,7 @@ wt switch --create <name> --no-cd --format=json --yes
 wt remove <name> --format=json --yes --foreground
 ```
 
-This removes the worktree and deletes its branch once the branch adds nothing to the default branch. `--foreground` holds the command until the removal finishes, so the next command sees the result.
-
 - `--force` also removes a worktree carrying uncommitted changes.
 - `--force-delete` also deletes a branch whose commits are unmerged.
 
-Either flag discards work, so show me the blast radius and wait for my go-ahead: the uncommitted and untracked files for `--force`, the commits the branch adds for `--force-delete`.
+Before passing either flag, show me its blast radius and wait for my go-ahead: the uncommitted and untracked files for `--force`, the commits the branch adds for `--force-delete`.
