@@ -18,12 +18,12 @@ Or, from a clone, symlink every skill into `~/.claude/skills` and `~/.codex/skil
 
 ## Skills
 
-### [`ofx-adr`](skills/ofx-adr/SKILL.md)
+### [`ofx-architecture-decision-record`](skills/ofx-architecture-decision-record/SKILL.md)
 
 Use when a technical decision needs its options weighed. Settles the option set with you and stops when only one survives, researches each option into a record under `adr/` whose bodies stay neutral and whose summary compares them all on the same decision factors, and leaves the outcome yours to call.
 
 ```sh
-skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-adr
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-architecture-decision-record
 ```
 
 ### [`ofx-audit`](skills/ofx-audit/SKILL.md)
