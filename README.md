@@ -26,6 +26,14 @@ Use when a technical decision needs its options weighed. Settles the option set 
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-adr
 ```
 
+### [`ofx-audit`](skills/ofx-audit/SKILL.md)
+
+Use when a file or part of a project needs auditing. Follows the target to everything that loads it and everything it calls, reproduces each suspected problem and its fix on a throwaway instance, drops every claim no test proves, and writes a report ranked by impact with a copy-paste fix per finding.
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-audit
+```
+
 ### [`ofx-commit`](skills/ofx-commit/SKILL.md)
 
 Use when committing the current changes. Classifies every path as in or out of scope, stages only the in-scope ones, and writes a conventional-commit message whose body carries why the change was made.
