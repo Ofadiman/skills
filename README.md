@@ -18,6 +18,14 @@ Or, from a clone, symlink every skill into `~/.claude/skills` and `~/.codex/skil
 
 ## Skills
 
+### [`ofx-agentic-development`](skills/ofx-agentic-development/SKILL.md)
+
+Use when starting a feature whose design needs settling before code, or resuming one already under way. Interviews you round by round into a Q&A file you answer in your editor, turns the settled answers into a skeleton plan, then implements it task by task until every check is green.
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-agentic-development
+```
+
 ### [`ofx-architecture-decision-record`](skills/ofx-architecture-decision-record/SKILL.md)
 
 Use when a technical decision needs its options weighed. Settles the option set with you and stops when only one survives, researches each option into a record under `adr/` whose bodies stay neutral and whose summary compares them all on the same decision factors, and leaves the outcome yours to call.
@@ -40,14 +48,6 @@ Use when committing the current changes. Classifies every path as in or out of s
 
 ```sh
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-commit
-```
-
-### [`ofx-sdd`](skills/ofx-sdd/SKILL.md)
-
-Use when starting a feature, or resuming one already under way. Interviews you into a Q&A file you answer in your editor, turns the settled answers into a skeleton plan, then implements it once you agree to the plan.
-
-```sh
-skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-sdd
 ```
 
 ### [`ofx-state-machines`](skills/ofx-state-machines/SKILL.md)
