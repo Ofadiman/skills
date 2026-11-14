@@ -60,7 +60,7 @@ skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-
 
 ### [`ofx-steps-to-reproduce`](skills/ofx-steps-to-reproduce/SKILL.md)
 
-Use when a bug needs steps to reproduce it by hand. Traces the bug from the line that goes wrong back to the outermost interface that reaches it, writes each step as an action and what you see, ties every step that sets up the failure to the code it drives, and runs the steps itself when a local instance allows.
+Use when a behaviour, such as a bug or what a command's option does, needs steps to reproduce it by hand. Traces the behaviour from the line in the code or man page that decides it back to the outermost interface that reaches it, writes each step as an action and what you see, and ties every step that sets up the behaviour to that source.
 
 ```sh
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-steps-to-reproduce
