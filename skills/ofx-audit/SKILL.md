@@ -32,16 +32,14 @@ Investigation is done when every lens has been applied to every file in scope an
 
 ## 3. Report
 
-Rank the findings by impact: what is broken now, then what breaks on a path or platform the project supports, then rough edges, then cleanups that fix nothing broken, each marked _Optional_. Write them in that order to `.agent-output/<subject>-audit.md`:
+Rank the findings by impact: what is broken now, then what breaks on a path or platform the project supports, then rough edges, then cleanups that fix nothing broken, each marked _Optional_. Write them in that order to `.agent-output/<subject>-audit.md`, where every line after the title belongs to a finding:
 
 ```md
 # <subject> audit
-
-Scope: <files and live state examined, what was left out and why, and how behaviour was tested>
 
 ## 1. <the fix>: <the consequence it removes>
 
 <the mechanism, the test and what it showed, and a copy-paste fix>
 ```
 
-Then reply with a numbered summary mirroring the report: per finding, one bold sentence naming the fix and its consequence, then its test and what it showed in a sentence or two. Open with the finding count, that nothing changed, how behaviour was tested, and the report's path.
+Then reply with a numbered summary mirroring the report: per finding, one bold sentence naming the fix and its consequence, then its test and what it showed in a sentence or two. Open with the finding count, that nothing changed, and the report's path.
