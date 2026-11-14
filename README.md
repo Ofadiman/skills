@@ -58,6 +58,14 @@ Use when an app's modes hide in flag clusters and scattered status checks. Searc
 skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-state-machines
 ```
 
+### [`ofx-steps-to-reproduce`](skills/ofx-steps-to-reproduce/SKILL.md)
+
+Use when a bug needs steps to reproduce it by hand. Traces the bug from the line that goes wrong back to the outermost interface that reaches it, writes each step as an action and what you see, ties every step that sets up the failure to the code it drives, and runs the steps itself when a local instance allows.
+
+```sh
+skills add Ofadiman/skills --global --yes --agent claude-code codex --skill ofx-steps-to-reproduce
+```
+
 ### [`ofx-to-flashcards`](skills/ofx-to-flashcards/SKILL.md)
 
 Use when notes taken while reading documentation need turning into something to study from. Sorts every note into topics, checks each claim against the official docs, and writes flashcards, each a question followed by its answer in prose, folding later notes into the same file.
